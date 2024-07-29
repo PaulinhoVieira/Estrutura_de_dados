@@ -1,3 +1,4 @@
+//q7
 class Cliente{
   constructor(nome, preferencia){
     this.nome = nome;

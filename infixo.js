@@ -1,30 +1,31 @@
+//q9
 const infixo = "asd+dcv";
-const stack = infixo.split('');
+const queue = infixo.split('');
 
-if(stack.includes("+")){
-  console.log(posFixas(stack, "+"));
-}else if(stack.includes("-")){
-  console.log(posFixas(stack, "-"));
-}else if(stack.includes("/")){
-  console.log(posFixas(stack, "/"));
-}else if(stack.includes("%")){
-  console.log(posFixas(stack, "%"));
-}else if(stack.includes("*")){
-  console.log(posFixas(stack, "*"));
+if(queue.includes("+")){
+  console.log(posFixas(queue, "+"));
+}else if(queue.includes("-")){
+  console.log(posFixas(queue, "-"));
+}else if(queue.includes("/")){
+  console.log(posFixas(queue, "/"));
+}else if(queue.includes("%")){
+  console.log(posFixas(queue, "%"));
+}else if(queue.includes("*")){
+  console.log(posFixas(queue, "*"));
 }else{
-  console.log(stack.join(''));
+  console.log(queue.join(''));
 }
 
-function posFixas(stack, oper){
+function posFixas(queue, oper){
   let cont = 0;
-  while(cont < stack.length-1){
-    if(stack[cont] === oper){
-      let temp = stack[cont];
-      stack[cont] = stack[cont+1];
-      stack[cont+1] = temp;
+  while(cont < queue.length-1){
+    if(queue[cont] === oper){
+      let temp = queue[cont];
+      queue[cont] = queue[cont+1];
+      queue[cont+1] = temp;
     }
     cont ++;
   }
-  return stack.join('');
+  return queue.join('');
 }
 

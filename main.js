@@ -1,4 +1,11 @@
-import mensagem from "./q6.js";
+//q6
+
+class mensagem{
+  constructor(pri, men){
+     this.priority = pri;
+     this.mensage = men;
+  }
+}
 
 const m1 = new mensagem(1,"Aou");
 const m2 = new mensagem(4,"davi");
@@ -15,7 +22,7 @@ function mensageria(vetor){
     let cont = 0;
   
     // Garantir que cont esteja dentro dos limites do array
-    while (cont < vetorA.length && vetor[x].prioridade > vetorA[cont].prioridade) {
+    while (cont < vetorA.length && vetor[x].priority > vetorA[cont].priority) {
       cont++;
     }
   

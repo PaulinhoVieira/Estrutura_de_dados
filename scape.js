@@ -1,4 +1,5 @@
-const lab = [
+//q8
+const maze = [
   [0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
   [1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
@@ -10,14 +11,14 @@ const lab = [
   [1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
 ]
-let caminho = [];
+let path = [];
 let cont = 0;
 for(let x = 0; x < 10; x ++){
   for(let y = 0; y < 10; y ++){
-    if(lab[x][y] == 0){
-      caminho[cont] = `[${x}, ${y}]`;
+    if(maze[x][y] == 0){
+      path[cont] = `[${x}, ${y}]`;
       cont ++
     }
   }
 }
-console.log(caminho);
+console.log(path);
